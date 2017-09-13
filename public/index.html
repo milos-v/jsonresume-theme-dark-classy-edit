@@ -1,0 +1,426 @@
+<!doctype html>
+<html>
+	<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+	
+	<title>Miloš Veljković</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/FortAwesome/Font-Awesome/307323a6a7fe69b7018cb49d2b7e43e1f4b6c92b/css/font-awesome.min.css">
+
+	<style>
+	/*<!--*/
+body {
+	font-size: 62.5%;
+	font-family: "Montserrat", sans-serif;
+	background-color: #171717;
+	color: #eeeeee;
+}
+.main-wrap {
+	max-width: 960px;
+	margin: 0 auto;
+}
+a {
+	color: #aaaaaa;
+	text-decoration: none;
+	-webkit-transition: color 0.175s ease 0.05s;
+	   -moz-transition: color 0.175s ease 0.05s;
+	        transition: color 0.175s ease 0.05s;
+}
+a:visited {
+	color: #777777;
+}
+a:hover,
+a:focus {
+	color: #455d66;
+	text-decoration: none;
+}
+.header {
+	text-align: center;
+	font-size: 2em;
+	margin: 0 10%;
+}
+.section {
+	padding: 1em 1em 0 1em;
+	margin-bottom: 1em;
+}
+.section .fa.left {
+	margin-right: 0.25em;
+}
+h1 {
+	color: #eeeeee;
+	font-size: 2em;
+	margin: 1em 0 0;
+	text-transform: uppercase;
+}
+h2 {
+	font-size: 3.5em;
+	margin: 0.83em 0;
+	text-transform: uppercase;
+}
+h3 {
+	color: #aaaaaa;
+	font-size: 1.75em;
+	margin: 1em 0 0;
+}
+h4 {
+	color: #666666;
+	font-size: 1.25em;
+	margin: 0 0 1em;
+}
+.profile {
+	font-family: "Montserrat";
+	font-size: 1em;
+	margin: 0;
+}
+.profile-name {
+	display: none;
+}
+.contact-header {
+	font-weight: bold;
+}
+.contact-list li,
+.contact-list a {
+	color: #eeeeee;
+}
+.label {
+	margin-top: 0;
+	margin-bottom: 0.25em;
+}
+.fa {
+	font-size: 2em;
+}
+.left {
+	font-size: 1em;
+}
+.main {
+	margin: 0 10% 5em;
+}
+.skills {
+	margin-bottom: 0.5em;
+}
+p {
+	color: #aaaaaa;
+	font-family: "Open Sans";
+	font-size: 1.5em;
+}
+li {
+	color: #aaaaaa;
+	font-family: "Open Sans";
+	font-size: 1.5em;
+}
+.list-lines,
+.list-lines li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.list-lines li {
+	font-family: "Montserrat";
+	font-size: 1em;
+}
+.list-set,
+.list-set li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.list-set li {
+	font-family: "Montserrat";
+	display: inline-block;
+}
+.list-set li a {
+	display: inline-block;
+}
+.list-set li .fa {
+	min-width: 1em;
+	min-height: 1em;
+}
+/*Minor adjustment to icons.*/
+.list-set li .fa-stack-overflow:before {
+	font-size: 0.9em;
+	position: relative;
+	top: -0.05em;
+}
+.list-set.keywords {
+	overflow: hidden;
+}
+.list-set.keywords li {
+	background-color: #444444;
+	color: #eeeeee;
+	padding: 0.4em 0.5em;
+	font-size: 1.2em;
+	display: inline-block;
+	margin: 1px;
+	float: left;
+}
+.profiles-list {
+	margin-top: 0.75em;
+}
+blockquote {
+	margin: 2em 1em;
+	padding: 1em;
+	border-left: 0.75em solid #666666;
+	font-family: "Open Sans";
+	font-size: 1.5em;
+}
+blockquote .name {
+	font-weight: bold;
+	font-family: "Montserrat";
+	margin-top: 1em;
+}
+::-moz-selection {
+	background: #666666;
+}
+::selection {
+	background: #666666;
+}
+@media (max-width: 768px) {
+	body {
+		font-size: 50%;
+	}
+	.header {
+		margin: 0 5%;
+	}
+	.main {
+		margin: 0 5%;
+	}
+}
+@media print {
+	body {
+		background: #FFFFFF;
+		color: #171717;
+	}
+	.main-wrap {
+		width: 100%;
+	}
+	.main {
+		margin: 0 0 1em 0;
+	}
+	.section {
+		page-break-inside: avoid;
+	}
+	.main .section:last-child {
+		margin-bottom: 0;
+	}
+	a {
+		color: #555555;
+	}
+	a:visited {
+		color: #555555;
+	}
+	a:hover,
+	a:focus {
+		color: #555555;
+	}
+	h1 {
+		color: #111111;
+		margin-top: 0.5em;
+	}
+	h2 {
+		margin: 0.25em 0;
+	}
+	h3 {
+		color: #555555;
+	}
+	h4 {
+		color: #bbbbbb;
+	}
+	.contact-list li,
+	.contact-list a {
+		color: #111111;
+	}
+	p {
+		color: #555555;
+	}
+	li {
+		color: #555555;
+	}
+	.list-set.keywords li {
+		background-color: transparent;
+		color: #555555;
+		border: 1px solid #aaaaaa;
+	}
+	blockquote {
+		border-color: #999999;
+	}
+	* {
+		/*Avoid printing the color at the start of the transition (Chrome issue).*/
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		        transition: none !important;
+
+	}
+}
+/*-->*/
+
+	</style>
+	
+	</head>
+	<body>
+	<div class="main-wrap">
+	<!-- <div id="resume"> -->
+		
+		<header class="header">
+			<h1>Miloš Veljković</h1>
+			<h3 class="label">Programmer</h3>
+			<ul id="contact" class="contact-list list-lines">
+				<li class="contact-header">(+381)69 189 19 99</li>
+				<li class="contact-header"><a href="mailto:mlsvljkvc@gmail.com">mlsvljkvc@gmail.com</a></li>
+			</ul>
+			<ul id="profiles" class="profiles-list list-set">
+				<li><a href="https://www.linkedin.com/in/mlsvljkvc/" class="profile" title="LinkedIn"><i class="fa fa-linkedin"></i><span class="profile-name">LinkedIn</span></a></li>
+				<li><a href="https://github.com/milos-v" class="profile" title="Github"><i class="fa fa-github"></i><span class="profile-name">Github</span></a></li>
+			</ul>
+		</header>
+
+		<main role="main" class="main">
+			<section id="about" class="section">
+				<h2><i class="fa fa-user left"></i>About</h2>
+				<p>Started as a designer because being a designer gives you a chance to express yourself creatively. One time a website had to be finished, the design was done but no one in the company knew how to do HTML/CSS. I decided to give it a try. Somehow it came naturally to me and the more I learned the clearer it became to me that coding is also highly creative. It quickly captured the whole of my attention. Still for a long time design remained in my field of work, so I was able to constantly mix the two but still, gradually I switched to coding. In the past two years I&#x27;ve been doing mostly back-end programming and designing only as a hobby.       I am eager to learn more and continue to improve my skills from project to project so I can have a bigger impact wherever I land.</p>
+			</section>
+			<section id="work" class="section">
+				<h2><i class="fa fa-suitcase left"></i>Work Experience</h2>
+				<section class="section-sub section-sub-job">
+					<h3>Junior web designer, Unique Web Design</h3>
+						<h4>October 2006  - March 2008</h4>
+					<p>Couple of high school friends wanted to practice what they learned in high school and so Unique Web Design was born. Before UWD each of us knew a bit about web site creation and after it all three of us have made dozens of them from scratch. </p>
+					<h4>Highlights</h4>
+					<ul>
+						<li>Mastering Photoshop CS3</li>
+						<li>Designing a web page from scratch</li>
+						<li>Designing modular web page elements</li>
+					</ul>
+				</section>
+				<section class="section-sub section-sub-job">
+					<h3>Frontend developer, Dodo</h3>
+						<h4>March 2014 - April 2016</h4>
+						<h4><a href=http://fakturabank.no>http://fakturabank.no</a></h4>
+					<p>Designing and developing frontend part of a web based accounting app. Every day communication with the clients. Later on leading a team of 3 frontend developers, team expansion, interviews..</p>
+					<h4>Highlights</h4>
+					<ul>
+						<li>Complete upgrade of UI/UX </li>
+						<li>Mastering SASS, jQuery, JS</li>
+						<li>Introduction to Ruby, Rails, Postgres</li>
+					</ul>
+				</section>
+				<section class="section-sub section-sub-job">
+					<h3>Frontend developer, Probe &amp; Query</h3>
+						<h4>November 2015 - April 2016</h4>
+						<h4><a href=http://probe-query.com/>http://probe-query.com/</a></h4>
+					<p>Part time work on developing a Wordpress theme for International Water Association. </p>
+					<h4>Highlights</h4>
+					<ul>
+						<li>Wordpress introduction</li>
+						<li>Working with one of the best UI designers in Belgrade</li>
+					</ul>
+				</section>
+				<section class="section-sub section-sub-job">
+					<h3>Web developer, RBT</h3>
+						<h4>April 2016 - present</h4>
+					<p>Working on a large team and a variety of projects. Started with frontend, mostly AngularJS and ReactJS. Later switched to ROR completely, mostly MongoDb</p>
+					<h4>Highlights</h4>
+					<ul>
+						<li>Mastering ROR, MongoDb, AngularJS</li>
+						<li>Introduction ReactJS, Redux, Python, Flask</li>
+					</ul>
+				</section>
+				<section class="section-sub section-sub-job">
+					<h3>Junior frontend developer, ESD</h3>
+						<h4>November 2013 - February 2014</h4>
+						<h4><a href=http://esd.rs>http://esd.rs</a></h4>
+					<p>Out sourcing company. Mostly doing PSD to HTML conversion(HTML5, CSS3, JS) but also some web shop creation(HTML, PHP, JS) and a bit of design.</p>
+					<h4>Highlights</h4>
+					<ul>
+						<li>Mastering HTML, CSS</li>
+						<li>Definite switch from design to coding</li>
+						<li>Introduction to PHP</li>
+					</ul>
+				</section>
+			</section>
+			<section id="education" class="section">
+				<h2><i class="fa fa-graduation-cap left"></i>Education</h2>
+				<section class="section-sub section-sub-education">
+					<h3>High School - Gimnazija &quot;Sveti Sava&quot;</h3>
+					<h4>September 2004 - May 2008</h4>
+					<p>Natural Sciences</p>
+				</section>
+			</section>
+			<section id="skills" class="section">
+				<h2><i class="fa fa-tasks left"></i>Skills</h2>
+				<section class="section-sub section-sub-skill">
+					<!-- <h3 class="skills">Web Development</h3> -->
+					<h3>Master</h3>
+					<ul class="list-set keywords">
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>Javascript</li>
+						<li>SASS</li>
+						<li>jQuery</li>
+						<li>AngularJS</li>
+						<li>Ruby</li>
+						<li>RubyOnRails</li>
+						<li>MongoDB</li>
+					</ul>
+				</section>
+				<section class="section-sub section-sub-skill">
+					<!-- <h3 class="skills">Web Development</h3> -->
+					<h3>Intermediate</h3>
+					<ul class="list-set keywords">
+						<li>ReactJS</li>
+						<li>Redux</li>
+						<li>Python</li>
+						<li>Flask</li>
+						<li>PHP</li>
+						<li>Wordpress</li>
+						<li>Adobe Photoshop</li>
+						<li>Illustrator</li>
+					</ul>
+				</section>
+			</section>
+			<section id="interests" class="section">
+				<h2><i class="fa fa-star left"></i>Interests</h2>
+				<section class="section-sub section-sub-interest">
+					<h3 class="skills">Nature</h3>
+					<ul class="list-set keywords">
+							<li>Hiking</li>
+							<li>Mountain climbing</li>
+							<li>Free climbing</li>
+					</ul>
+				</section>
+				<section class="section-sub section-sub-interest">
+					<h3 class="skills">Music</h3>
+					<ul class="list-set keywords">
+							<li>Production</li>
+							<li>Mixing</li>
+							<li>Cubase</li>
+							<li>Traktor</li>
+					</ul>
+				</section>
+				<section class="section-sub section-sub-interest">
+					<h3 class="skills">Other</h3>
+					<ul class="list-set keywords">
+							<li>Table tennis</li>
+							<li>Table football</li>
+							<li>Football</li>
+							<li>Biking</li>
+							<li>....</li>
+					</ul>
+				</section>
+			</section>
+			<section id="languages" class="section">
+				<h2><i class="fa fa-quote-left left"></i>Languages</h2>
+				<section class="section-sub section-sub-language">
+					<h3>Serbian</h3>
+					<h4>Fluency: Native</h4>
+				</section>
+				<section class="section-sub section-sub-language">
+					<h3>English</h3>
+					<h4>Fluency: Fluent</h4>
+				</section>
+			</section>
+		</main>
+	</body>
+</html>

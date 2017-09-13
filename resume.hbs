@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+	<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+	
+	<title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/FortAwesome/Font-Awesome/307323a6a7fe69b7018cb49d2b7e43e1f4b6c92b/css/font-awesome.min.css">
+
+	<style>
+	{{{css}}}
+	</style>
+	
+	</head>
+	<body>
+	<div class="main-wrap">
+	<!-- <div id="resume"> -->
+		
+		<header class="header">
+			<h1>{{#resume.basics}}{{name}}{{/resume.basics}}</h1>
+			<h3 class="label">{{#resume.basics}}{{label}}{{/resume.basics}}</h3>
+			<ul id="contact" class="contact-list list-lines">
+				<li class="contact-header">{{#resume.basics}}{{phone}}{{/resume.basics}}</li>
+				<li class="contact-header"><a href="mailto:mlsvljkvc@gmail.com">{{#resume.basics}}{{email}}{{/resume.basics}}</a></li>
+			</ul>
+			<ul id="profiles" class="profiles-list list-set">
+			{{#each resume.basics.profiles}}
+				<li><a href="{{this.url}}" class="profile" title="{{this.network}}"><i class="fa fa-{{this.faclass}}"></i><span class="profile-name">{{this.network}}</span></a></li>
+			{{/each}}
+			</ul>
+		</header>
+
+		<main role="main" class="main">
+			<section id="about" class="section">
+				<h2><i class="fa fa-user left"></i>About</h2>
+				<p>{{#resume.basics}}{{summary}}{{/resume.basics}}</p>
+			</section>
+			<section id="work" class="section">
+				<h2><i class="fa fa-suitcase left"></i>Work Experience</h2>
+				{{#each resume.work}}
+				<section class="section-sub section-sub-job">
+					<h3>{{this.position}}, {{this.company}}</h3>
+					{{#if this.endDate}}
+						<h4>{{this.startDate}} - {{this.endDate}}</h4>
+					{{else}}
+						<h4>{{this.startDate}} - present</h4>
+					{{/if}}
+					{{#if this.website}}
+						<h4><a href={{this.website}}>{{this.website}}</a></h4>
+					{{/if}}
+					<p>{{this.summary}}</p>
+					<h4>Highlights</h4>
+					<ul>
+					{{#each this.highlights}}
+						<li>{{this}}</li>
+						{{/each}}
+					</ul>
+				</section>
+				{{/each}}
+			</section>
+			<section id="education" class="section">
+				<h2><i class="fa fa-graduation-cap left"></i>Education</h2>
+				{{#each resume.education}}
+				<section class="section-sub section-sub-education">
+					<h3>{{this.studyType}} - {{this.institution}}</h3>
+					<h4>{{this.startDate}} - {{this.endDate}}</h4>
+					<p>{{this.area}}</p>
+				</section>
+				{{/each}}
+			</section>
+			<section id="skills" class="section">
+				<h2><i class="fa fa-tasks left"></i>Skills</h2>
+				{{#each resume.skills}}
+				<section class="section-sub section-sub-skill">
+					<!-- <h3 class="skills">Web Development</h3> -->
+					<h3>{{this.level}}</h3>
+					<ul class="list-set keywords">
+					{{#each this.keywords}}
+						<li>{{this}}</li>
+					{{/each}}
+					</ul>
+				</section>
+				{{/each}}
+			</section>
+			<section id="interests" class="section">
+				<h2><i class="fa fa-star left"></i>Interests</h2>
+				{{#each resume.interests}}
+				<section class="section-sub section-sub-interest">
+					<h3 class="skills">{{this.name}}</h3>
+					<ul class="list-set keywords">
+						{{#each this.keywords}}
+							<li>{{this}}</li>
+						{{/each}}
+					</ul>
+				</section>
+				{{/each}}
+			</section>
+			<section id="languages" class="section">
+				<h2><i class="fa fa-quote-left left"></i>Languages</h2>
+				{{#each resume.languages}}
+				<section class="section-sub section-sub-language">
+					<h3>{{this.language}}</h3>
+					<h4>Fluency: {{this.fluency}}</h4>
+				</section>
+				{{/each}}
+			</section>
+		</main>
+	</body>
+</html>

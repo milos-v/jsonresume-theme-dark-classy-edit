@@ -1,0 +1,14 @@
+{
+  "name": "jsonresume-theme-dark-classy-edited",
+  "version": "0.1.1",
+  "description": "Dark classy edit of the infamous jsonresume theme.",
+  "author": "Cko bu",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/milos-v/jsonresume-theme-dark-classy-edited"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^2.0.0-alpha.4"
+  }
+}
